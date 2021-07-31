@@ -9,9 +9,11 @@
     --f18: 18px;
 }   
 
+
 html{
     scroll-behavior: smooth;
 }
+
 
 .wrapper{
     min-height: 100%;
@@ -24,6 +26,11 @@ html{
     max-width: 1440px;
     margin: 0 auto;
     padding: 75px 0;
+}
+
+.welcome__container{
+    padding-top: 114px;
+    padding-bottom: 246px;
 }
 
 header{
@@ -98,6 +105,79 @@ header{
 main{
     flex: 1 1 auto;
 }
+
+.bg-section {
+  background-color: var(--bg-dark);
+}
+
+.welcome{
+    min-height: 750px;
+    background-image: url("../img/bg.jpg");
+    background-size: 1215px 750px;
+    background-repeat: no-repeat;
+    background-position: calc(50% + 352px) 100%;
+    color: #FFF;
+}
+
+.welcome__column{
+    display:inline-block;
+}
+
+.section-title {
+    font-family: Forum;
+    font-style: normal;
+    font-weight: normal;
+    font-size: var(--f80);
+    line-height: 90px;
+    letter-spacing: 5px;
+    text-transform: uppercase; 
+}
+
+.welcome__subtitle {
+    margin-top:26px;
+    margin-bottom: 75px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: var(--f28);
+    line-height: 33px;
+    letter-spacing: 2px;
+}
+
+.welcome__block{
+    display: block;
+}
+
+.button-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+    color: #FFF;
+    text-align: center;
+}
+
+.welcome__button{
+    width:360px;
+    height:75px;
+    border-radius: 10px;
+    background-color: var(--dark-red);
+}
+
+.button a{
+    height: 100%;
+    width: 100%;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome__button:hover{
+    background-color:var(--font-gold);
+}
+
 
 footer{
     background-color: var(--bg-dark);
