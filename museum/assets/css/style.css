@@ -134,6 +134,10 @@ main{
     color: var(--font-gold);
 }
 
+.white-title{
+    color: #fff;
+}
+
 .underline-title {
     position: relative;
 }
@@ -159,7 +163,7 @@ main{
     letter-spacing: 2px;
 }
 
-.welcome__block{
+.block{
     display: block;
 }
 
@@ -190,7 +194,7 @@ main{
 }
 
 .welcome__button:hover{
-    background-color:var(--font-gold);
+    background-color: var(--font-gold);
 }
 
 .visiting__gallery {
@@ -251,6 +255,7 @@ h3.card__title-underline::after {
 .card__subtitle {
     margin-top:21px;
 }
+
 .card-subtitle {
     font-family: Roboto;
     font-style: normal;
@@ -263,6 +268,7 @@ h3.card__title-underline::after {
 .card__text {
     margin-top:10px;
 }
+
 .card-text {
     font-family: Roboto;
     font-style: normal;
@@ -270,6 +276,49 @@ h3.card__title-underline::after {
     font-size: 18px;
     line-height: 21px;
     color: #000000;
+}
+
+.beige-color{
+    color: #CAAA7D;
+}
+
+.explore__row {
+    display: flex;
+    column-gap: 60px;
+}
+
+.explore_col1 {
+    align-self: flex-start;
+}
+
+.explore_col2 {
+    margin-top:15px;
+    align-self: flex-end;
+}
+
+.white__text{
+    color:#fff;
+}
+
+.explore__text{
+    margin-top: 103px;
+}
+
+.explore__text p{
+    margin-bottom: 25px;
+
+}
+
+.explore__text p:last-child {
+    margin-bottom:0px;
+}
+
+.text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 38px;
 }
 
 footer{
