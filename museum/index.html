@@ -44,9 +44,9 @@
                     <div class="welcome__column">
                         <h2 class="title">Welcome<span class="block">to the Louvre</span></h2>
                         <div class="welcome__subtitle"><p>From the castle to the museum</p></div>
-                        <div class="welcome__button button">
+                        <div class="welcome__button-main button-main">
                             <a href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">
-                                <p class="button-text">Discover the Louvre</p>
+                                <p class="button-main-text">Discover the Louvre</p>
                             </a>
                         </div>
                     </div>
@@ -135,6 +135,28 @@
                     </div>
                 </div>
             </section>
+
+            <section id="video">
+                <div class="video-container container">
+                    <div class="video__preview">
+                        <button class="video__play button"> </button>
+                    </div>
+                    <div class="video__panel">
+                        <button class="video__back button"></button>
+                        <button class="video__sm-play button"></button>
+                        <button class="video__forward button"></button>
+                        <input type="range" class="video__duration progress" value="47" min="0" max="100" step="1">
+                        <button class="video__volume-status button"></button>
+                        <input type="range" class="video__volume progresss" value="42" min="0" max="100" step="1">
+                        <button class="video__full-screen button"></button>
+                    </div>
+                    <div class="video__text-content">
+                        <h2 class="gold-title title">Video journey</h2>
+                        <p class="black-text text">Enter and visit one of the most famous museums in the world
+                             and enjoy<span class="block">masterpieces such as Mona Lisa or Hammurabi's Code</span> </p>
+                    </div>
+                </div>
+            </section>
             
         </main>
         <!-- <footer>
@@ -146,5 +168,6 @@
         </footer> -->
 
     </div>
+    <script src="assets/index.js"></script>
 </body>
 </html>
