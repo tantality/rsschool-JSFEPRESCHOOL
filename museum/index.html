@@ -157,6 +157,59 @@
                     </div>
                 </div>
             </section>
+
+            <section class="tickets bg-section" id="tickets">
+                <div class="container">
+                    <h2 class="white-title underline-title title">Buy tickets</h2>
+                    <div class="tickets__row">
+
+                        <div class="tickets__col1">
+                            <img src="assets/img/shield_of_aeneas.jpg" width="720" height="550" alt="Shield of Aeneas">
+                        </div>
+
+                        <div class="tickets__col2">
+                            <h4 class="white-title">Ticket Type</h4>
+                            <div class="radiobut">
+                                <input type="radio" id="radiobut1" name="radio" value="per_ex" class="tickets__input" checked>
+                                <label for="radiobut1" class="white-title radiobuts-text">Permanent exhibition</label>
+                            </div>
+                            <div class="radiobut">
+                                <input type="radio" id="radiobut2" name="radio" value="temp_ex" class="tickets__input">
+                                <label for="radiobut2" class="white-title radiobuts-text">Temporary exhibition</label>
+                            </div>
+                            <div class="radiobut">
+                                <input type="radio" id="radiobut3" name="radio" value="combined" class="tickets__input">
+                                <label for="radiobut3" class="white-title radiobuts-text">Combined Admission</label>
+                            </div>
+
+                        </div>
+
+                        <div class="tickets__col3" >
+                                <h4 class="tickets__white-title white-title">Amount</h4>
+                                <div class="tickets__group1 group">
+                                     <p class="tickets__text white__text text">Basic 18+</p>
+                                        <div class="tickets__counter">
+                                            <button class="tickets__button minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">—</button>
+	                                        <input type="number" min="0" value="1" readonly class="input_text text">
+	                                        <button class="tickets__button plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+                                        </div>
+                                </div>
+
+                                <div class="tickets__group2 group">
+                                    <p class="tickets__text white__text text">Senior 65+</p>
+                                        <div class="tickets__counter">
+                                            <button class="tickets__button minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">—</button>
+                                            <input type="number" min="0" value="1" readonly class="input_text text">
+                                            <button class="tickets__button plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+                                         </div>
+                                </div>
+                                <p class="tickets__total text">Total €220</p>
+                                <button class="tickets__buy-but but" type="button">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
             
         </main>
         <!-- <footer>
