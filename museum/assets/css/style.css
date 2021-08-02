@@ -168,6 +168,10 @@ main{
 .welcome__subtitle {
     margin-top:26px;
     margin-bottom: 75px;
+    
+}
+
+.subtitle{
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
@@ -300,11 +304,11 @@ h3.card__title-underline::after {
     column-gap: 60px;
 }
 
-.explore_col1 {
+.explore__col1 {
     align-self: flex-start;
 }
 
-.explore_col2 {
+.explore__col2 {
     margin-top:15px;
     align-self: flex-end;
 }
@@ -671,6 +675,40 @@ h3.card__title-underline::after {
     height:50px;
     border-radius: 2px;
     background-color: #fff;
+}
+
+.contacts__row {
+    margin-top: 103px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contacts__col {
+    margin-top: 10px;
+}
+
+.contacts__subtitle {
+    font-weight: 500;
+    letter-spacing: normal;
+}
+
+.contacts__address {
+    margin-top: 36px;
+}
+
+.contacts__address p{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 26px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.contacts__address :last-child {
+    margin-right: 0px;
 }
 
 
