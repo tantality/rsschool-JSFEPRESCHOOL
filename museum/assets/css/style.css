@@ -57,13 +57,13 @@ header{
     align-items: center;
 }
 
-.header__logo a {
+.logo a, .logo a {
     display: inline-flex;
     justify-content: space-between;
     align-items: center; 
 }
 
-.header__text {
+.logo-text {
     font-family: 'Forum';
     font-style: normal;
     font-weight: 400;
@@ -99,17 +99,21 @@ header{
     color:#fff;
 }
 
-.header__nav li a:visited, a .header__text:visited {
+.footer__col2-nav li a{
+    color: #fff;
+}
+
+.header__nav li a:visited, .footer__col2-nav li a:visited, .logo-text:visited {
     color: #fff; 
 } 
-.header__nav li a:hover, a .header__text:hover {
+.header__nav li a:hover,.footer__col2-nav li a:hover, a .logo-text:hover {
     color: var(--font-gold); 
 }
-.header__nav li a:active, a .header__text:active {
+.header__nav li a:active,.footer__col2-nav li a:active, a .logo-text:active {
     color: var(--font-gold); 
 }
 
-.header__nav li a:focus, a .header__text:focus {
+.header__nav li a:focus,.footer__col2-nav li a:focus, a .logo-text:focus {
     color: var(--font-gold); 
 }
 
@@ -711,7 +715,6 @@ h3.card__title-underline::after {
     margin-right: 0px;
 }
 
-
 footer{
     background-color: var(--bg-dark);
     height: 300px;
@@ -721,3 +724,80 @@ footer{
     display: flex;
 }
 
+.footer__col2-nav {
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    column-gap: 156px;
+    width: 366px;
+}
+
+
+.footer__col1{
+    margin-right: 145px;
+}
+
+
+.footer__nav-text{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 50px;
+    letter-spacing: 2px;
+    color: #FFF;
+}
+
+.circle-col{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.circle{
+    border: 1px solid #666666;
+    border-radius: 50px;
+    filter: drop-shadow(0px 0px 0px #666666);
+    width: 48px;
+    height: 48px;
+}
+
+
+.social-icon{
+    background-size: 24px 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.footer__col3{
+    display: inline-flex;
+    align-items: flex-end;
+    margin-left: 398px;
+    column-gap: 24px;
+    margin-bottom: 14px;
+}
+
+.footer__youtube {
+    background-image: url("../svg/youtube.svg");
+}
+
+.footer__instagram {
+    background-image: url("../svg/instagram.svg");
+}
+
+.footer__facebook {
+    background-image: url("../svg/facebook.svg");
+}
+.footer__twitter {
+    background-image: url("../svg/twitter.svg");
+}
+.footer__pinterest {
+    background-image: url("../svg/pinterest.svg");
+}
+
+a .circle:hover, a .circle:focus{
+    filter: invert(60%) sepia(5%) saturate(2625%) hue-rotate(356deg) brightness(89%) contrast(78%);
+}
