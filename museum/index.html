@@ -7,7 +7,7 @@
     <title>Museum</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel="icon" href="assets/favicon.ico"> -->
+    <link rel="icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
 </head>
@@ -16,12 +16,12 @@
         <header>
             <div class="container">
                 <div class="header__row">
-                    <div class="header__logo">
+                    <div class="logo">
                         <a href="#">
                             <div>
                                <img src="assets/svg/logo_louvre.svg" alt="logo">
                             </div>
-                            <h1 class="header__text">Louvre</h1>
+                            <h1 class="logo-text">Louvre</h1>
                         </a>
                     </div>
 
@@ -39,7 +39,7 @@
             </div>
         </header>
         <main>
-            <section class="welcome bg-section">
+            <section class="welcome bg-section" id="welcome">
                 <div class="welcome__container container">
                     <div class="welcome__column">
                         <h2 class="title">Welcome<span class="block">to the Louvre</span></h2>
@@ -232,7 +232,58 @@
         <footer>
             <div class="container">
                 <div class="footer__row">
-                    
+                    <div class="footer__col1 logo">
+                        <a href="#">
+                            <div>
+                               <img src="assets/svg/logo_louvre.svg" alt="logo">
+                            </div>
+                            <h1 class="logo-text">Louvre</h1>
+                        </a>
+                    </div>
+                
+                    <nav>
+                         <ul class="footer__col2-nav footer__nav-text">
+                            <li style><a href="#welcome">Welcome</a></li>
+                            <li style><a href="#visiting">Visiting</a></li>
+                            <li><a href="#explore">Explore</a></li>
+                            <li><a href="#video">Video</a></li>
+                            <li><a href="#tickets">Tickets</a></li>
+                            <li><a href="#contacts">Contacts</a></li>
+                         </ul>
+                    </nav>
+
+                    <div class="footer__col3">
+
+                        <a href="https://www.youtube.com/user/louvre" >
+                            <div class="circle circle-col">
+                                <div class="footer__youtube social-icon"></div>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/museelouvre/">
+                            <div class="circle circle-col">
+                                <div class="footer__instagram social-icon"></div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.facebook.com/museedulouvre">
+                            <div class="circle circle-col">
+                                <div class="footer__facebook social-icon"></div>
+                            </div>
+                        </a>
+
+                        <a href="http://twitter.com/museelouvre">
+                            <div class="circle circle-col">
+                                <div class="footer__twitter social-icon"></div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.pinterest.fr/museedulouvre/">
+                            <div class="circle circle-col">
+                                <div class="footer__pinterest social-icon"></div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
