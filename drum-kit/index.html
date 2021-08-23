@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
+    <title>Drum Kit</title>
+</head>
+<body>
+    <div class="keys">
+        <div class="key" data-key="65">
+            <kbd class="key__name">A</kbd>
+            <span class="key__sound">clap</span>
+        </div>
+        <div class="key" data-key="83">
+            <kbd class="key__name">S</kbd>
+            <span class="key__sound">hihat</span>
+        </div>
+        <div class="key" data-key="68">
+            <kbd class="key__name">D</kbd>
+            <span class="key__sound">kick</span>
+        </div>
+
+        <div class="key" data-key="70">
+            <kbd class="key__name">F</kbd>
+            <span class="key__sound">openhat</span>
+        </div>
+        <div class="key" data-key="71">
+            <kbd class="key__name">G</kbd>
+            <span class="key__sound">boom</span>
+        </div>
+        <div class="key" data-key="72">
+            <kbd class="key__name">H</kbd>
+            <span class="key__sound">ride</span>
+        </div>
+
+        <div class="key" data-key="74">
+            <kbd class="key__name">J</kbd>
+            <span class="key__sound">share</span>
+        </div>
+        <div class="key" data-key="75">
+            <kbd class="key__name">K</kbd>
+            <span class="key__sound">tom</span>
+        </div>
+        <div class="key" data-key="76">
+            <kbd class="key__name">L</kbd>
+            <span class="key__sound">tink</span>
+        </div>
+    </div>
+    
+
+    <audio data-key="65" src="assets/sounds/clap.wav"></audio>
+    <audio data-key="83" src="assets/sounds/hihat.wav"></audio>
+    <audio data-key="68" src="assets/sounds/kick.wav"></audio>
+    <audio data-key="70" src="assets/sounds/openhat.wav"></audio>
+    <audio data-key="71" src="assets/sounds/boom.wav"></audio>
+    <audio data-key="72" src="assets/sounds/ride.wav"></audio>
+    <audio data-key="74" src="assets/sounds/snare.wav"></audio>
+    <audio data-key="75" src="assets/sounds/tom.wav"></audio>
+    <audio data-key="76" src="assets/sounds/tink.wav"></audio>
+
+    <script>
+        
+        function addSoundAndAnim(event){
+            let key = event.type==='mousedown' ? event.target.closest('.key') : document.querySelector(`.key[data-key='${event.keyCode}']`);
+            if(!key) return;
+            let audio=document.querySelector(`audio[data-key='${key.getAttribute('data-key')}']`);
+            audio.currentTime=0;
+            audio.play();
+
+            key.classList.add('playing');
+        }
+
+        function deleteAnim(event)
+        {
+            let key = event.type==='mouseup' || event.type==='mouseout' && event.relatedTarget.classList=='keys' ?
+            event.target.closest('.playing') : document.querySelector(`.playing[data-key='${event.keyCode}']`);
+            if(!key) return;
+            key.classList.remove('playing');
+            console.log(event.type);
+        }
+
+        function disableSelect(event) {
+        event.preventDefault();
+        }
+
+        let keys=document.querySelector('.keys');
+        window.addEventListener('keydown', addSoundAndAnim); 
+        window.addEventListener('keyup', deleteAnim);
+        keys.addEventListener('mousedown', addSoundAndAnim);
+        keys.addEventListener('mouseup', deleteAnim);
+        keys=Array.from(keys.children);
+        keys.forEach(k=>k.addEventListener('mouseout', deleteAnim));
+        window.addEventListener('mouseup', disableSelect);
+        window.addEventListener('selectstart', disableSelect);
+    </script>
+</body>
+</html>
