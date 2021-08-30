@@ -1,4 +1,4 @@
-console.log('Самооценка:\nРеализован проект с базовой(+10) и обязательной дополнительной функциональностью(+10), помимо этого на панель управления была добавлена информация о текущем времени воспроизведения видео и его продолжительности(+3)\nПеремотка видео вперед/назад на 5 секунд осуществляется при помощи кнопок, расположенных по бокам от кнопки play/pause\nОтметка:22/30\nПроект еще дорабатывается');
+console.log('Самооценка:\nРеализован проект с базовой(+10) и обязательной дополнительной функциональностью(клавиши m,space,f,<,>)(+10), помимо этого на панель управления была добавлена информация о текущем времени воспроизведения видео и его продолжительности(+2)\nКлавиши j,k,l активны, где\nj-перемотка видео на 10 сек назад(+2)\nk-play/pause\nl-перемотка видео на 10 сек вперед(+2)\nПерейти к определенному момент видео можно, используя клавиши 0-9 (например, при нажатии на цифру "7" ролик будет перемотан до временной отметки, которая соответствует 70% от длительности видео) (+2)\nПеремотка видео вперед/назад на 5 секунд осуществляется при помощи кнопок, расположенных на панели управления по бокам от кнопки play/pause\nОтметка:28/30\n');
 let video=document.querySelector('.current-video__viewer');
 let playButton=document.querySelector('.controls__play-sm-button');
 let volumeButton=document.querySelector('.controls__volume-button');
@@ -40,7 +40,6 @@ function togglePlay(){
 }
 
 function toggleFullscreen(e){
-    console.log(video.fullscreenEnabled);
     video.webkitRequestFullScreen();
     if(video.fullscreenEnabled) openFullscreen();
     else closeFullscreen();
@@ -67,10 +66,19 @@ function editPlaybackRate(value){
 
 function keyHandler(e){
     if(e.keyCode==70) toggleFullscreen();
-    else if(e.keyCode==32) togglePlay();
+    else if(e.keyCode==32 || e.keyCode==75) togglePlay();
     else if(e.key=='<') editPlaybackRate(-0.25);
     else if(e.key=='>') editPlaybackRate(0.25);
     else if (e.keyCode==77) toggleMute();
+    else if (e.keyCode==74) skipFragment(e,-10);
+    else if (e.keyCode==76) skipFragment(e,10);
+    switch(e.key){
+        case '0': case '1':case '2':case '3':case '4':case '5':case '6':case '7':case '8':
+        case '9': 
+                video.currentTime=0;
+                let value=Number(e.key)*0.1*video.duration;
+                skipFragment(e,value);
+    }
 }
 
 function videoTime(e){
