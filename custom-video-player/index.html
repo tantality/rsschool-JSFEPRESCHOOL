@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="style.css">
+    <title>Custom Video Player</title>
+</head>
+<body>
+        <main>
+            <section class="videos">
+                <div class="container">
+                    <div class="current-video">
+                        <video class="current-video__viewer" src="assets/videos/woodpecker.mp4"></video>
+                        <div class="current-video__controls">
+                            <button class="controls__previous-button button"></button>
+                            <button class="controls__play-sm-button button pause"></button>
+                            <button class="controls__next-button button"></button>
+                            <div class="time">
+                                <span class="time__current-time">0:00</span>
+                                <span> / </span>
+                                <span class="time__duration">0:00</span>
+                            </div>
+                            <input type="range" name="duration" class="controls__duration progress" min="0" max="1" step="0.001" value="0">
+                            <button class="controls__volume-button button sound"></button>
+                            <input type="range" name="volume" class="controls__volume progress sound" min="0" max="1" step="0.01" value="0.5">
+                            <button  class="controls__fullscreen-button button"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <script src="index.js"></script>
+</body>
+</html>
